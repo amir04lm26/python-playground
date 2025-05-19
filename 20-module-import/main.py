@@ -3,7 +3,7 @@ import random as r
 
 # import sample_module
 # import sample_module as sm
-# from sample_module imp ort hello
+# from sample_module import hello
 # from sample_module import hello as hello_sm
 from sample_module import *  # This is not recommended, Also the linter throws some warnings
 

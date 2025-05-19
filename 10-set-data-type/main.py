@@ -1,6 +1,10 @@
-# sets are many memory efficient
 # we can not insert duplicates in sets
 items: set = {"Apple", "Banana", 10, True, "Apple", "banana"}
+"""
+Sets are implemented using hash tables, which allow for very fast membership checks (O(1) on average).
+But because of that internal hashing mechanism, sets may use more memory than lists, especially for
+small collections.
+"""
 
 print(items)  # Output: ex.  {True, 'banana', 'Banana', 'Apple', 10}
 
@@ -37,12 +41,12 @@ print(items)
 
 # remove element from set
 items.remove("Apple")
-# items.remove("not_exists") # KeyError: 'apple'
+# items.remove("not_exists") # KeyError: 'not_exists'
 
 print(items)
 
 # discard
-items.discard("not_exists ")  # does not throw an error
+items.discard("not_exists")  # does not throw an error
 
 # pop or other array methods are unpredictable in operation
 # ex. in pop we don't know which item is removed
@@ -83,18 +87,27 @@ print(new_set)  # Output: ex. {True, 'Banana'}
 
 # find the differences of sets
 items: set = {"Apple", "Banana", "Apple", "banana", True}
-items2: set = {True, 10, "Banana"}
+items2: set = {True, 10, "Banana", "peach"}
 
 items.symmetric_difference_update(items2)
-print(items)  # Output: ex. {'Apple', 10, 'banana'}
+print(items)  # Output: ex. {10, 'banana', 'peach', 'Apple'}
 
 # find the differences of sets - return a new set
 items: set = {"Apple", "Banana", "Apple", "banana", True}
-items2: set = {True, 10, "Banana"}
+items2: set = {True, 10, "Banana", "peach"}
 
 new_set = items.symmetric_difference(items2)
-print(new_set)  # Output: ex. {'Apple', 10, 'banana'}
+print(new_set)  # Output: ex. {10, 'banana', 'peach', 'Apple'}
 
 
 # create a empty set
 people = set()
+
+
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a | b)  # Union: {1, 2, 3, 4, 5}
+print(a & b)  # Intersection: {3}
+print(a - b)  # Difference: {1, 2} -> items.difference
+print(2 in a)  # Membership test: True

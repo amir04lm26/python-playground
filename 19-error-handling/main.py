@@ -90,7 +90,8 @@ def raise_error():
     user_input: str = input("Enter a number: ")
 
     if user_input == "0":
-        raise Exception("Please never use 0!")
+        # raise Exception("Please never use 0!")
+        raise ZeroDivisionError("Please never use 0!")
 
     print(user_input)
 
@@ -111,7 +112,7 @@ def connect_to_internet():
 
 try:
     connect_to_internet()
-except ConnectionError:
-    print("There is no connection!")
+except ConnectionError as err:
+    print("There is no connection!", err)
 except Exception as err:
     print(err)

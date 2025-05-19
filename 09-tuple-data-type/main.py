@@ -5,7 +5,6 @@ people: tuple[str] = ("Mario", "Luigi", "Peach")
 people: tuple[str, ...] = ("Mario", "Luigi", "Peach")
 people: tuple = ("Mario", "Luigi", "Peach", 2)
 
-
 tp = ("Mario",)  # tuple
 print(type(tp))  # Output: <class 'tuple'>
 
@@ -32,7 +31,7 @@ print("Mario" in people)  # Output: True
 print(people + ("Alex",))  # Output: ('Mario', 'Luigi', 'Luigi', 'Alex')
 
 # Another way would be by converting to list, appending to it then reconvert it to tuple
-people_tuple: tuple = tuple(people_list)
+people_list: list = list(people_tuple)
 people_list.append("Mike")
 print(tuple(people_list))  # Output: ('Mario', 'Luigi', 'Luigi', 'Mike')
 
@@ -45,6 +44,7 @@ print(people.count("luigi"))  # Output: 0
 # find the index of an element
 print(people.index("Luigi"))  # Output: 1
 print(people_list.index("Luigi"))  # Output: 1
+# print(people_list.index("luigi"))  # ValueError: 'luigi' is not in list
 
 # unpacking tuples and lists
 a, b, c = people

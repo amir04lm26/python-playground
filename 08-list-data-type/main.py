@@ -13,7 +13,7 @@ print(people[0:2])  # Output: ['Mario', 'Luigi']
 print(people[:2])  # Output: ['Mario', 'Luigi']
 print(people[0:4])  # Output: ['Mario', 'Luigi', 'Peach', 'Toad']
 print(people[0:])  # Output: ['Mario', 'Luigi', 'Peach', 'Toad']
-print(people[-3:-1])  # Output: ['Luigi', 'P each']
+print(people[-3:-1])  # Output: ['Luigi', 'Peach']
 print(people[-1:-3])  # Output: []
 print(people[0:5])  # Output: ['Mario', 'Luigi', 'Peach', 'Toad']
 

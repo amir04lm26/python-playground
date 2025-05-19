@@ -8,7 +8,7 @@ print(greeting + "Luigi")
 happy_thoughts = "Happy"
 
 # constants
-# we must not  change the value of constants
+# we must not change the value of constants
 PI = 3.1415
 
 # string
@@ -62,8 +62,14 @@ connected = True  # bool
 ascii_vals = bytes([65, 66, 67])  # bytes - List of ASCII values (Output: b'ABC')
 """
 A bytes object is an immutable sequence of bytes. Once created, the contents of the bytes object cannot be modified.
+
+hello_byte = b"hello"
+# hello_byte[2] = b"s"
+hello_byte[2] = ord("s") # The ord() function in Python returns the Unicode code point (integer) of a single character.
+# !TypeError: 'bytes' object does not support item assignment
 """
 hello_byte = b"hello"
+
 
 # bytearray (Mutable)
 byte_arr = bytearray("hello", "utf-8")  # bytearray
@@ -72,7 +78,7 @@ A bytearray is a mutable sequence of bytes. Unlike bytes, you can modify the con
 """
 byte_arr2 = bytearray([65, 66, 67])
 
-# memoryview
+# memoryview - not the same as pointers (doesn't have raw access)
 mv = memoryview(byte_arr2)  # memoryview
 """
 A memoryview object in Python is a view of a given object that exposes the object's buffer interface. It allows you to access

@@ -9,7 +9,7 @@ else:
 
 print("Done!")
 
-# ternary operator equivalent
+# ternary operator equivalent - inline if statement
 a = 5
 print("Success!") if a > 2 else print("Failure")
 

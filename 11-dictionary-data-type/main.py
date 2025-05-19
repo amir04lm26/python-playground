@@ -1,6 +1,6 @@
 users = {}  # dict
 
-users = {"user1": "Mario123", "user2": "Luigi456"}
+users: dict = {"user1": "Mario123", "user2": "Luigi456"}
 
 print(users)  # Output: {'user1': 'Mario123', 'user2': 'Luigi456'}
 print(len(users))  # Output: 2

@@ -32,7 +32,7 @@ def sum_numbers(a: float, b: float) -> float:
     return a + b
 
 
-print(sum_numbers(10, 20))  # Output: 30
+print(sum_numbers(10, 20), type(sum_numbers(10, 20)))  # Output: 30 <class 'int'>
 
 
 # recursion
@@ -51,7 +51,7 @@ do_something(5)
 
 # * -> unlimited amount of arguments
 def greet_people(*people: str, age: int):
-    print(people, type(people), age)  # Output: ex. ('Mario', 'Luigi') <class 'tuple'>
+    print(people, type(people), age)  # Output: ex. ('Mario', 'Luigi') <class 'tuple'> 10
     for name in people:
         print(f"Hello, {name}")
 
